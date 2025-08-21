@@ -55,6 +55,17 @@ body {
     color: white;                    /* keep text white on hover */
 }
 
+/* Links inside project cards */
+.project-card a {
+    color: white;                    /* white text */
+    text-decoration: none;           /* no underline */
+    display: block;                  /* make entire link behave like a card */
+}
+
+.project-card a:hover {
+    color: #ddd;                     /* slight grey highlight on hover */
+}
+
 /* Custom Cursor */
 .cursor-dot {
     width: 25px;
