@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="graph"></div>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script>
+  const trace = {
+    x: Array.from({length: 30}, () => Math.random()*10),
+    y: Array.from({length: 30}, () => Math.random()*10),
+    z: Array.from({length: 30}, () => Math.random()*10),
+    mode: 'markers',
+    type: 'scatter3d',
+    marker: {
+      size: 5,
+      color: 'red',
+      opacity: 0.8
+    },
+    text: Array.from({length: 30}, (_, i) => `Point ${i+1}`),
+    hoverinfo: 'text'
+  };
+
+  const layout = {
+    margin: { l:0, r:0, b:0, t:0 },
+    paper_bgcolor: '#0C0D0E',
+    scene: {
+      xaxis: { title: 'X Axis', color: 'white' },
+      yaxis: { title: 'Y Axis', color: 'white' },
+      zaxis: { title: 'Z Axis', color: 'white' }
+    }
+  };
+
+  Plotly.newPlot('graph', [trace], layout, {responsive: true});
+</script>
+<!-- partial -->
+  
+</body>
+</html>
