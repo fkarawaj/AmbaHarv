@@ -36,6 +36,7 @@ body {
 }
 
 .project-card {
+    display: block;                  /* so the <a> behaves like a card */
     background-color: #1A1B1C;
     padding: 2rem;
     border-radius: 12px;
@@ -43,11 +44,15 @@ body {
     text-align: center;
     transition: transform 0.3s ease, background-color 0.3s ease;
     cursor: pointer;
+
+    text-decoration: none;           /* remove underline */
+    color: white;                    /* force white text */
 }
 
 .project-card:hover {
     transform: translateY(-10px);
     background-color: #2a2b2d;
+    color: white;                    /* keep text white on hover */
 }
 
 /* Custom Cursor */
